@@ -1,4 +1,6 @@
-Twitter-Bootstrap-Styles--SASS-Flavored
+Don't judge me, Earl
 =======================================
 
-Twitter Bootstrap's LESS stylesheets, rewritten jankily in .SASS syntax. No one other than me should use these files yet, or judge me for them.
+This is just Bootstrap's LESS stylesheets, rewritten jankily in .SASS syntax, as I was working on a current project. 
+
+It's probably best that no one other than me use these files, or judge me for unleashing them. 

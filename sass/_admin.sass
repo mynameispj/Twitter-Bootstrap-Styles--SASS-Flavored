@@ -1,0 +1,29 @@
+nav.subnav
+	+center-container
+	margin-top: 20px
+	
+	ul 
+		float: left 
+		
+		li
+			display: inline
+			margin-right: 10px
+			
+			a
+				padding: 5px
+				color: $brown
+				font-size: 12px
+				
+				&:hover
+					background: lighten($brown,20%)
+					+border-radius(5px)
+					color: #fff					
+				
+				&.active
+					background: $brown
+					+border-radius(5px)
+					color: #fff
+	
+	.button
+		margin-top: -5px
+						

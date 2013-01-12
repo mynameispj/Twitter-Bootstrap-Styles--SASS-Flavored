@@ -1,0 +1,337 @@
+// Contents
+//	Buttons & Links
+//	UI Colors
+//	Modals
+
+
+//BUTTONS & LINKS
+
+.btn, 
+.button 
+	+border-radius(10px)
+	+headline-type
+	padding: 10px 0
+	height: auto
+	line-height: auto
+	display: inline-block
+	
+	&.small
+		padding: 5px
+	
+button 
+	margin-right: 5px
+	background: transparent
+	
+	.btn-group &
+		float: none
+		clear: none
+		margin-right: 0
+
+	
+	
+a.help, 
+p.help
+	font-size: 11px	
+	
+a.help
+	padding-left: 10px
+		
+p.help 
+	padding-top: 5px	
+	color: $gray	
+
+//UI COLORS
+
+a
+	cursor: pointer 
+	text-decoration: none
+	
+	
+	section .container &
+		color: $orange
+		border-bottom: 1px solid lighten($orange,20%)
+		+single-transition(all,0.1s,linear)
+		
+		&:hover
+			color: darken($orange,20%)
+			border-bottom: 1px solid $orange
+
+.primary
+	background: #FFE56D
+	+background(linear-gradient($gold,$gold-dark))
+	color: $orange
+	text-shadow: 0px 1px 0px rgba(#FFEFAE,0.7)
+	border: 1px solid lighten($orange,15%)
+	
+	&:hover
+		background: lighten($gold,15%)
+		+background(linear-gradient(lighten($gold,15%),$gold-dark))
+		color: darken($orange,10%)
+		
+.secondary 
+	background: $gray
+	+background(linear-gradient($gray,$gray-dark))
+	color: #333333
+	//text-shadow: 0px 1px 0px rgba(#FFEFAE,0.7)
+	border: 1px solid #666666
+	
+	&:hover
+		background: lighten($gray,10%)
+		+background(linear-gradient(lighten($gray,10%),$gray-dark))
+			
+		
+
+.green 
+	background: $green-light		
+	color: lighten($green-light,40%)
+	text-shadow: 0px 1px 0px rgba(darken($green,10%),0.6)
+	
+	&:hover
+		color: #fff
+		background: lighten($green-light,15%)
+		+background(linear-gradient(lighten($green-light,15%),$green-light))
+		text-decoration: none
+		border-bottom: none
+
+$warningText: #c09853
+$warningBackground: #fcf8e3
+$warningBorder: darken(adjust-hue($warningBackground, -10), 3%)
+
+$errorText: #b94a48
+$errorBackground: #f2dede
+$errorBorder: darken(adjust-hue($errorBackground, -10), 3%)
+
+$successText: #468847
+$successBackground: #dff0d8
+$successBorder: darken(adjust-hue($successBackground, -10), 5%)
+
+$infoText: #3a87ad
+$infoBackground: #d9edf7
+$infoBorder: darken(adjust-hue($infoBackground, -10), 7%)
+
+
+
+//MODAL STUFF 
+	
+.modal
+	&#login
+		width: 330px
+		margin-left: -165px
+
+
+.modal-header 
+	+green-gradient		
+	
+.modal-footer
+	
+	#login &
+		button
+			float: right	
+			
+			
+//SYSTEM MESSAGES
+
+.message
+	padding: 10px
+	border-width: 5px
+	border-color: #ccc
+	border-style: solid
+	
+	&.global
+		border: none
+
+		p, 
+		ul li 
+			font-size: 14px
+		
+		ul 
+			list-style: disc inside
+			padding-left: 0
+			
+			li 
+				.help
+					display: inline-block
+					margin-left: 10px
+					margin-top: 0
+	
+	p, 
+	ul li 
+		font-size: 13px
+		
+	ul 
+		list-style: disc outside
+		padding-left: 16px
+		margin-bottom: 0
+		
+		li 
+			padding-bottom: 5px
+			
+			.help
+				font-size: 12px
+				background: #ccc
+				padding: 5px	
+				+border-radius(3px)
+				font-weight: normal
+				margin-top: 5px
+		
+	h3	
+		padding-bottom: 10px 
+		margin-bottom: 10px 
+		border-bottom-width: 1px 
+		border-bottom-color: #ccc
+		border-bottom-style: solid
+	
+	&.success
+		background: lighten($green-light,20%)
+		border-color: $green-light
+		
+		p 
+			color: #fff
+		
+	&.error
+		background: darken(#ff0000,20%)
+		border-color: #ff0000
+		color: #fff
+		
+		h3
+			border-bottom-color: darken(#ff0000,30%)
+		
+		ul 
+			li 
+				.help
+					background: darken(#ff0000,30%)
+					color: lighten(#ff0000,40%)
+					
+					a 
+						color: $gold
+						text-decoration: underline
+						+single-transition(color, 0.2s, linear)
+						
+						&:hover
+							color: #fff
+							
+
+.controls
+	font-size: 12px 
+	
+	li 
+		display: inline
+		float: left 
+		padding-right: 10px 
+		margin-right: 10px 
+		border-right: 1px solid darken($beige,20%)
+		
+		&:last-child, 
+		.last
+			border-right: none
+			
+	
+	.icon
+		padding-left: 16px 
+		
+		&.edit
+			background: transparent url('i/icon-edit.png') no-repeat left 3px
+		
+		&.delete
+			background: transparent url('i/icon-trash.png') no-repeat left 3px
+	
+				
+			
+
+.credit-card-icon
+	height: 44px
+	width: 73px
+	display: block
+	float: left
+	background: transparent url('i/icons-payment.png')
+	text-indent: -9999px
+	margin-left: 10px 
+	
+	&.visa				
+		
+	&.mc
+		background-position: -73px top
+		
+	&.amex 
+		background-position: -146px top
+		
+	&.paypal 
+		background-position: -219px top						
+						
+.circle 
+	+border-radius(75px)
+	padding: 0 10px
+	margin-right: 5px 
+	display: inline-block
+	
+	&.small
+		padding: 5px 10px
+
+	h1 &, 
+	h2 &
+		font-size: 0.9em
+
+	&.dark-green
+		background: $green-dark
+		color: $green-light
+		
+	&.gray
+		background: #ccc
+		color: #666	
+									
+.popover-trigger
+	cursor: pointer	
+	
+.header
+	clear: left									
+
+
+			
+//LAYOUT MODIFIERS
+
+.push-top
+	margin-top: 10px 
+	
+	&.five
+		margin-top: 5px
+		
+.pull-top
+	margin-top: -10px		
+
+
+//
+// Close icons
+// --------------------------------------------------
+
+.close 
+	float: right
+	font-size: 20px
+	font-weight: bold
+	line-height: $baseLineHeight
+	color: $black
+	text-shadow: 0 1px 0 rgba(255,255,255,1)
+	//+opacity(20)
+	width: 26px
+	height: 25px
+	background: transparent url('i/icon-close.png') no-repeat
+	text-indent: -9999px
+	margin-right: 0
+
+	&:hover 
+		color: $black
+		text-decoration: none
+		cursor: pointer
+		//+opacity(40)
+		
+	&:active
+		margin-top: 3px	
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+button.close 
+	padding: 0
+	cursor: pointer
+	background: transparent url('i/icon-close.png') no-repeat
+	border: 0
+	-webkit-appearance: none

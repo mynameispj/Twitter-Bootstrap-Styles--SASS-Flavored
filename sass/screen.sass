@@ -1,0 +1,265 @@
+@import 'compass/reset'
+@import 'compass/css3'
+@import 'compass/layout/sticky-footer'
+@import 'compass/utilities/general/clearfix'
+
+@import 'variables.sass'
+@import 'color.sass'
+@import 'mixins.sass'
+
+@import 'grid.sass'
+@import 'layouts.sass'
+
+@import 'structure.sass'
+//@import 'type.sass' Can probably remove this after porting from Bootstrap
+
+@import 'typography.sass'
+@import 'code.sass'
+@import 'forms.sass'
+@import 'tables.sass'
+
+@import 'dropdowns.sass'
+@import 'component-animations.sass'
+
+@import 'buttons.sass'
+@import 'button-groups.sass'
+
+@import 'alerts.sass'
+@import 'modal.sass'
+@import 'tooltip.sass'
+@import 'popovers.sass'
+
+//@import "thumbnails.less";
+//@import "media.less";
+@import 'labels-badges.sass'
+//@import "progress-bars.less";
+//@import "accordion.less";
+//@import "carousel.less";
+//@import "hero-unit.less";
+
+@import 'ui.sass'
+@import 'lists.sass'
+
+@import 'utilities.sass'
+
+
++sticky-footer(168px, "#layout", "#layout_footer", "#footer")
+
+body
+	font-family: 'Helvetica Neue,' Helvetica, Arial, sans-serif
+	background: $beige
+
+a:hover
+	text-decoration: none
+	
+header 
+	background: $green
+	border-top: 5px solid $green-light
+	color: #fff
+	overflow: hidden 
+	height: 42px
+	line-height: 42px
+	
+	a
+		color: #fff
+		text-decoration: none
+		
+		&.brand
+			font-size: 24px
+			text-transform: lowercase 
+	
+	nav 
+		float: right 
+		
+		ul
+			float: right
+			list-style: none
+		
+			li
+				display: inline-block 
+				
+				a
+					display: inline-block
+					padding: 0 15px
+					
+					&:hover
+						background: $green-light
+						text-decoration: none
+						color: #fff
+
+	
+	body.admin & 
+		background: $black
+		color: #fff
+			
+		.greeting
+			float: left
+			padding-left: 15px
+			font-size: 13px
+			color: #999
+			margin-top: 4px
+			
+		nav
+			ul
+				li 
+					a 
+						color: #999	
+						
+						&:hover
+							color: #fff
+						
+						&.active
+							color: #fff
+
+section
+
+	&#home
+		height: 600px 
+	
+		&.designer 
+			background: transparent url('i/home-fill-designer.png') no-repeat center -40px
+		
+	&.info
+		
+		padding: 10px 0	
+		
+		body#home &
+			background: $green
+			color: #fff
+			padding-bottom: 30px 
+			
+			p
+				color: lighten($green-light,30%)
+				font-size: 18px
+				line-height: 24px
+				font-weight: 300				
+			
+			h2 
+				font-weight: 300
+				margin-top: 10px
+				margin-bottom: 20px
+				font-size: 29px
+				
+			a.btn
+				float: right	
+				font-size: 24px
+				line-height: 24px
+				
+				
+footer
+	color: lighten(#333,10%)
+	background: $black		
+	margin-top: 50px
+	
+	.row
+		padding: 20px 0
+	
+	a 
+		color: lighten(#333,10%)
+		+single-transition(all,0.2s,linear)
+		
+		&:hover
+			color: lighten(#333,30%)
+		
+		
+	
+	nav
+		ul
+			li
+				padding-bottom: 10px
+		
+		
+		
+// PRICING PAGE
+
+.price-column, 
+.whitebox, 
+.price-info
+	background: #fff
+	border: 1px solid #ccc
+	padding: 10px 15px
+	+border-radius(10px)	
+	overflow: hidden
+	margin-top: 40px 
+	
+	.section
+		clear: left
+		padding-bottom: 50px
+	
+	h2 
+		color: #fff
+		+green-gradient	
+		+green-text-shadow
+		margin: -10px -15px 15px
+		padding: 10px 15px
+		text-shadow: 1px solid 
+		border-bottom: 1px solid darken($green,20%)
+		
+	p 
+		color: $brown	
+		
+	ul 
+		padding-top: 0.5em 
+		border-top: 3px solid lighten(#ccc,15%)
+		
+		li
+			font-size: 13px	
+			color: #666
+			margin-bottom: 5px
+			padding-bottom: 5px
+			border-bottom: 1px solid lighten(#ccc,15%)
+			
+			
+			strong
+				color: $black
+				
+	.price
+		+headline-type
+		text-align: center
+		font-size: 50px
+		color: $green	
+		
+		.currency, 
+		.time
+			font-size: 24px
+			
+	a.button
+		display: block
+		text-align: center
+		margin-top: 10px
+		margin-bottom: 10px 	
+
+.price-info
+	background: transparent
+	border: none
+	padding: 0
+	
+	h2
+		color: $green
+		background: transparent
+		text-shadow: none
+		padding-top: 0
+
+		
+		
+#basic
+	margin: 0 auto 60px
+	float: none
+	text-align: center
+	display: block 
+	
+	h3
+		color: $green			
+		margin-bottom: 15px
+		margin-top: 50px
+		padding-top: 10px
+		font-size: 20px
+		border-top: 3px solid $green
+		
+	p 
+		color: $brown
+		font-size: 13px
+		
+		
+@import 'admin.sass'
+		
